@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import SearchName from './SearchName';
 import { useNextPageStore, usePreviousPageStore, useCurrentUrlStore, useSearchValueStore } from '../services/store';
 
-export default function Header() {
+const Header = () => {
     /// Zustand - Before Zustand "getnextPage" & "getpreviousPage" was passed via props for the "setCurrentUrl"
     const nextPage = useNextPageStore((state) => state.nextPage);
     const previousPage = usePreviousPageStore((state) => state.previousPage);
@@ -48,3 +48,5 @@ export default function Header() {
     </Box>
   )
 }
+
+export default Header

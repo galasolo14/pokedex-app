@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid2';
 import PokemonItem from './PokemonItem';
 import { useFilteredPokemonsStore } from './../services/store';
 
-export default function PokemonList() {
-    const filteredPokemons = useFilteredPokemonsStore((state) => state.filteredPokemons);
+const PokemonList = () => {
+  const filteredPokemons = useFilteredPokemonsStore((state) => state.filteredPokemons);
 
   return (
     <Box sx={{ flexGrow: 1 }} marginTop={2}>
@@ -21,3 +21,5 @@ export default function PokemonList() {
 
   )
 }
+
+export default PokemonList
